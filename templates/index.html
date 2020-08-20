@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+		  background-image: url("https://99px.ru/sstorage/53/2016/10/tmb_182040_4270.jpg");
+		  background-repeat: no-repeat;
+		  height: 100%;
+          background-position: center;
+          background-size: cover;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="img"></div>
+		<div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+			<h1 style="font-size:43px;">Генерація вироблення електроенергії</h1><br><br><br><br><br><br>
+			<input placeholder="Вкажіть потужність станції" id="second" name="power" required="required">
+            <h3></h3><br><br><select name="station" id="fuel" required="required">
+				<option value="" disabled selected hidden>Оберіть тип станції</option>                
+				<option value="1">ВЕС</option>
+                <option value="2">СЕС</option>
+				<option value="3">мГЕС</option>
+				<option value="3">Біо</option>
+            </select>
+            <h3></h3><br><br><select name="substation" id="resea" required="required">
+				<option value="" disabled selected hidden>Оберіть підтип станції</option>                
+                <option value="1">Біогаз</option>
+				<option value="2">Біомаса</option>
+				<option value="3">Дах</option>
+                <option value="4">Земля</option>
+				<option value="5">Мала</option>
+				<option value="6">Мікро</option>
+				<option value="7">Міні</option>
+				<option value="0">Інше</option>
+            </select>
+            <h3></h3><br><br><select name="obl" id="research" required="required">
+				<option value="" disabled selected hidden>Оберіть область</option>                
+				<option value="0">Івано-Франківська</option>
+                <option value="1">Волинська</option>
+				<option value="2">Вінницька</option>
+				<option value="3">Дніпропетровська</option>
+                <option value="4">Донецька</option>
+				<option value="5">Житомирська</option>
+				<option value="6">Закарпатська</option>
+				<option value="7">Запорізька</option>
+				<option value="8">Київська</option>
+				<option value="9">Кіровоградська</option>
+				<option value="10">Луганська</option>
+				<option value="11">Львівська</option>
+                <option value="12">Миколаївська</option>
+				<option value="13">Одеська</option>
+				<option value="14">Полтавська</option>
+				<option value="15">Рівненська</option>
+				<option value="16">Сумська</option>
+				<option value="17">Тернопільська</option>
+				<option value="18">Харківська</option>
+				<option value="19">Херсонська</option>
+                <option value="20">Хмельницька</option>
+				<option value="21">Черкаська</option>
+				<option value="22">Чернівецька</option>
+				<option value="23">Чернігівська</option>
+				<option value="24">м.Київ</option>
+            </select>
+            <br><br><br><br><button id="sub" type="submit ">Вироблення енергії</button>
+            <br>
+        </form>
+
+		<br><br><h3 style="color:white; font-size:33px;">{{ prediction_text }}<h3>
+    </div>
+
+    <style>
+        body {
+            text-align: center;
+			padding: 0px;
+			height: 100%;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 200px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: grey);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 215px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: white;
+        }
+        
+        #research {
+            width: 180px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: white;
+        }
+        
+        #resea {
+            width: 215px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: white;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 48px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: grey;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+			width: 299px;
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+		}
+
+    </style>
+</body>
+
+</html>
