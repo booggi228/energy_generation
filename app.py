@@ -4,18 +4,20 @@ import requests
 import pickle
 import numpy as np
 
+# Define a flask app
 app = Flask(__name__)
 
+# Load trained model
 model = pickle.load(open('forest.pickle', 'rb'))
 
+# Main page
 @app.route('/',methods=['GET'])
 def Home():
     return render_template('index.html')
 
-
+# Get the information from post request
 @app.route("/predict", methods=['POST'])
 def predict():
-    Fuel_Type_Diesel=0
     if request.method == 'POST':
         power=float(request.form['power'])
         station=request.form['station']
@@ -95,6 +97,8 @@ def predict():
             obl = 24
         else:
             obl = 0
+
+        # Make prediction
         prediction=model.predict([[station, substation, obl, power]])
         output=round(prediction[0],2)
         
@@ -105,4 +109,3 @@ def predict():
 if __name__=="__main__":
     app.run(debug=True)
 
-        
