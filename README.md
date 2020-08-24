@@ -18,7 +18,9 @@
  * Dropped some of extreme outliers.  
  * Dealt with categorical variables using label encoder technique.  
  
- ## EDA  
+ ## Exploratory Data Analysis  
+ I looked at the distributions of the data and the value counts for the various categorical variables.  
+ ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/cor.png "Correlations")
  ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/dashboard-1.png)
  
  
