@@ -1,7 +1,7 @@
 # Energy Generation: Project Overview
   * Created a tool that estimates renewable energy generation from all renewable types of sources.   
   * Got the inside data from  Ministry of Energy of Ukraine.   
-  * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model.    
+  * Optimized Linear, Lasso, Ridge, Random Forest Regressors and XGBoost using GridsearchCV to reach the best model.    
   * Built a web application using flask.  
   * Link to my application: https://energy-generation.herokuapp.com/  
     
