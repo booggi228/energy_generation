@@ -4,14 +4,21 @@
   * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model.    
   * Built a web application using flask.  
   * Link to my application: https://energy-generation.herokuapp.com/  
+    
+## Code and Tools used
+  * **Python version:** 3.7  
+  * **Packages:** pandas, numpy, sklearn, matplotlib, seaborn, flask, pickle  
+  * **Tools:** Power BI Desktop  
   
-  
-  
-  
-  
-## How to run the project?
-  * Install all the libraries with command `pip install -r requirements.txt`.   
-  * Clone this repository in your local system.  
-  * Open the command prompt from your project directory and run the command `python main.py`.  
-  * Go to your browser and type http://127.0.0.1:5000/ in the address bar.  
-  * **That's all! Enjoy!**
+ ## Data Cleaning  
+ Before building a model, I needed to clean up the data so that it was usable for a model. I made the following changes:  
+ * First of all I had to understand nature of the data .info() .describe()
+ * Dealt with missing data and null values.  
+ * Built heatmap to check the correlation between features that helped to understand feature importance.   
+ * Dropped some of extreme outliers.  
+ * Dealt with categorical variables using label encoder technique.  
+ 
+ ## EDA  
+ 
+ 
+ 
