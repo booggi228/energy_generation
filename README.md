@@ -19,8 +19,17 @@
  * Dealt with categorical variables using label encoder technique.  
  
  ## Exploratory Data Analysis  
- I looked at the distributions of the data and the value counts for the various categorical variables.  
+ I looked at the distributions of the data and the value counts for the various categorical variables. After I dropped highly correlated features.  
  ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/cor.png "Correlations")
  ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/dashboard-1.png)
  
+ ## Model Building  
+ First, I transformed the categorical variables into numeric using Label encoder. I also split the data into train and tests sets with a test size of 20%.  
+ 
+ I tried five different models:  
+  * Linear regression (77%)
+  * Ridge and Lasso regression gave me 77.1% of accuracy.  
+  * XGBoost (94%)  
+  * Random Forest regressor (98%)  
+ I didn't start to apply model tuning techniques because I was pretty satisfied with results I've got from Random Forest with accuracy score 98%.  
  
