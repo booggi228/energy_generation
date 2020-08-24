@@ -19,6 +19,6 @@
  * Dealt with categorical variables using label encoder technique.  
  
  ## EDA  
- ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/dashboard.pdf)
+ ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/dashboard-1.png)
  
  
