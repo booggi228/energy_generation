@@ -19,7 +19,7 @@
  * Dealt with categorical variables using label encoder technique.  
  
  ## Exploratory Data Analysis  
- I looked at the distributions of the data and the value counts for the various categorical variables. After I dropped highly correlated features.  
+ I looked at the distributions of the data and the value counts for the various categorical variables. After I removed highly correlated features.  
  ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/cor.png "Correlations")
  ![alt text](https://github.com/booggi228/energy_generation/blob/master/images/dashboard-1.png)
  
@@ -32,4 +32,11 @@
   * XGBoost (94%)  
   * Random Forest regressor (98%)  
  I didn't start to apply model tuning techniques because I was pretty satisfied with results I've got from Random Forest with accuracy score 98%.  
+ 
+ ## Productionization  
+ In this step, I built a flask web application that was hosted on `heroku` platform. The app takes in a request with a list of values from the data and returns a planned yearly electricity generation.  
+ 
+
+
+
  
